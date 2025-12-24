@@ -1,12 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <title>Neha's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 34);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(18, 18, 75);
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(169, 77, 255);
+}
+
+/* HERO */
+.firstSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+}
+
+.leftSection {
+    font-size: 2.5rem;
+    max-width: 500px;
+}
+
+.rightSection img {
+    width: 280px;
+}
+
+.purple {
+    color: rgb(169, 77, 255);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #9c97f1;
+    margin: 40px 10%;
+}
+/* About Card */
+.aboutCard {
+    background: linear-gradient(145deg, rgb(18,18,75), rgb(30,30,100));
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid rgb(169, 77, 255);
+    box-shadow: 0 10px 25px rgba(169,77,255,0.25);
+}
+
+/* Project Row Layout */
+.projectRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.projectText {
+    flex: 1;
+}
+
+.projectImage {
+    flex: 1;
+    text-align: center;
+}
+
+.projectImage img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Reverse layout */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projectRow,
+    .reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    background: rgb(18, 18, 75);
+    padding: 30px 10%;
+    text-align: center;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.social a {
+    color: rgb(169, 77, 255);
+    margin: 0 10px;
+    text-decoration: none;
+}
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background: rgb(0, 0, 34);
+    color: rgb(169, 77, 255);
+    font-size: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(169,77,255,0.4);
+}
+
+.social a:hover {
+    background: rgb(169, 77, 255);
+    color: white;
+    transform: translateY(-5px);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .leftSection {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .firstSection {
+        text-align: center;
+    }
+
+    .rightSection img {
+        margin-top: 20px;
+    }
+}
+</style>
+
 </head>
+
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is a placeholder for Neha's portfolio website.</p>
+    <header>
+        <nav>
+    <div class="left">Neha's Portfolio</div>
+    <div class="right">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    </header>
+   <main>
+    <!-- HERO -->
+    <section class="firstSection"  id="home">
+        <div class="leftSection">
+            Hi, My name is <span class="purple">Neha</span>
+            <div>and I am a passionate</div>
+            <span id="element"></span>
+        </div>
+
+        <div class="rightSection">
+            <img src="nehaImg.png" alt="Neha Portfolio">
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ABOUT -->
+    <section class="aboutSection" id="about">
+    <h2>About Me</h2>
+
+    <div class="aboutCard">
+        <p>
+            Dedicated and results-driven aspiring Full-Stack Developer with a strong passion
+            for continuous learning and mastering new technologies. Proficient in front-end
+            development using HTML, CSS, JavaScript, and React. Currently expanding expertise
+            in back-end development, database management, and API integration to deliver
+            end-to-end software solutions.
+        </p>
+    </div>
+</section>
+
+
+    <hr>
+
+    <!-- PROJECTS -->
+    <section class="projectSection" id="projects">
+    <h2>Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="projectCard projectRow">
+        <div class="projectText">
+            <h3>Dynamic QR Code Generator</h3>
+            <p>
+                A dynamic QR Code Generator built using HTML, CSS, and JavaScript.
+                Users can generate and download QR codes for different links.
+            </p>
+        </div>
+
+        <div class="projectImage">
+            <img src="qrcode.png" alt="QR Code Project">
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="projectCard projectRow reverse">
+        <div class="projectText">
+            <h3>Temperature Website (API Based)</h3>
+            <p>
+                A weather website that fetches real-time temperature data using
+                an open-source API with JavaScript Fetch API.
+            </p>
+        </div>
+
+        <div class="projectImage">
+            <img src="Weather.png" alt="Weather Project">
+        </div>
+    </div>
+</section>
+
+</main>
+<footer id="contact">
+    <p>Contact Me</p>
+    <p>Email: rneha3927@gmail.com</p>
+    <!-- <p>Phone: +91 XXXXXXXX</p> -->
+
+
+<div class="social">
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/rneha3927-gif" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+</div>
+
+
+    <p>© 2025 Neha Rani | All Rights Reserved</p>
+</footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Frontend Developer', 'Web Designer', 'Video Editor'],
+            loop: true,
+            typeSpeed: 50,
+        });
+    </script>
 </body>
-</html>
+
+</html
